@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Video Page</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 80%;
+            height: 450px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Music Page!</h1>
+    </header>
+    <main>
+        <section>
+            <h2>My Favorite Song</h2>
+            <div class="video-container">
+                <!-- Embed YouTube video for Sezen Aksu's song -->
+                <iframe src="https://www.youtube.com/embed/nq0ZX5LsK5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <script>
+        // JavaScript for Animation
+        window.onload = function() {
+            const header = document.querySelector('header');
+
+            // Simple animation: change background color of header on load
+            let colors = ['#FFDDC1', '#FFABAB', '#FFC3A0'];
+            let i = 0;
+
+            function changeColor() {
+                header.style.backgroundColor = colors[i % colors.length];
+                i++;
+            }
+
+            setInterval(changeColor, 1000); // Change color every second
+        };
+    </script>
+</body>
+</html>
